@@ -12,7 +12,7 @@ struct ConversationCell: View {
         VStack {
             HStack(spacing: 12) {
                 
-                Image("venom-10")
+                Image("spiderman")
                     .resizable()
                     .scaledToFill()
                     .clipped()
@@ -21,7 +21,7 @@ struct ConversationCell: View {
                     .padding(.leading)
                 
                 VStack (alignment: .leading, spacing: 4) {
-                    Text("venom")
+                    Text("spiderman")
                         .font(.system(size: 14, weight: .semibold))
                     
                     Text("Longer text just to see what happens when I do this")

@@ -11,7 +11,7 @@ struct UserCell: View {
     var body: some View {
         HStack(spacing: 12) {
             
-            Image("venom-10")
+            Image("batman")
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -20,13 +20,14 @@ struct UserCell: View {
                 .padding(.leading)
             
             VStack (alignment: .leading, spacing: 4) {
-                Text("venom")
+                Text("Batman")
                     .font(.system(size: 14, weight: .semibold))
                 
-                Text("Eddie Brock")
+                Text("Bruce Wayne")
                     .font(.system(size: 14, weight: .semibold))
                 
             }
+            .foregroundColor(.black)
             
         }
     }

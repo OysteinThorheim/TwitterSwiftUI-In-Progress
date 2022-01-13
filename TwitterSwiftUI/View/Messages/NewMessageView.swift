@@ -1,5 +1,5 @@
 //
-//  SearchView.swift
+//  NewMessageView.swift
 //  TwitterSwiftUI
 //
 //  Created by Øystein Thorheim on 13/01/2022.
@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct NewMessageView: View {
     @State var searchText = ""
+    @Binding var show: Bool
+    @Binding var startChat: Bool
     
     var body: some View {
         ScrollView{
@@ -22,20 +24,22 @@ struct SearchView: View {
                         Spacer()
                     }
                     
-                    NavigationLink(
-                        destination: UserProfileView(),
-                        label: {
-                            UserCell()
-                        })
-                
+                    Button(action: {
+                        self.show.toggle()
+                        self.startChat.toggle()
+                    }, label: {
+                        
+                        UserCell()
+                        
+                    })
                 }
             }.padding(.leading)
         }
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
+struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        NewMessageView(show: .constant(true), startChat: .constant(true))
     }
 }
